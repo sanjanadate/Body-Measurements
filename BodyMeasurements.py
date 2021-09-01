@@ -90,7 +90,8 @@ def walker():
         imgPoints = cv2.imread("image1_walker.jpg")
         cv2.imshow("Body with Points", imgPoints)
         cv2.waitKey(0)
-
+        cv2.destroyAllWindows()
+        
         calf = distance(results.pose_world_landmarks.landmark[26].x, results.pose_world_landmarks.landmark[26].y,results.pose_world_landmarks.landmark[26].z,results.pose_world_landmarks.landmark[28].x, results.pose_world_landmarks.landmark[28].y,results.pose_world_landmarks.landmark[28].z )
         thigh = distance(results.pose_world_landmarks.landmark[26].x, results.pose_world_landmarks.landmark[26].y,
                          results.pose_world_landmarks.landmark[26].z, results.pose_world_landmarks.landmark[24].x,
@@ -146,7 +147,8 @@ def standingFrame():
         imgPoints = cv2.imread("image1_standing_frame.jpg")
         cv2.imshow("Body with Points", imgPoints)
         cv2.waitKey(0)
-
+        cv2.destroyAllWindows()
+        
         print("Measurements for Standing Frame -")
         print()
         calf = distance(results.pose_world_landmarks.landmark[26].x, results.pose_world_landmarks.landmark[26].y,
